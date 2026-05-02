@@ -48,7 +48,6 @@ const requireDatabase = (req, res, next) => {
 app.use('/api/auth', requireDatabase, authRoutes);
 app.use('/api/projects', requireDatabase, projectRoutes);
 app.use('/api/tasks', requireDatabase, taskRoutes);
-});
 
 if (process.env.NODE_ENV === 'production') {
   const frontendBuildPath = path.join(__dirname, '../../frontend/build');
